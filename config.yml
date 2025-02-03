@@ -1,0 +1,21 @@
+module:
+  mounts:
+    - source: assets
+      target: assets
+    - source: content
+      target: content
+    - source: i18n
+      target: i18n
+    - source: layouts
+      target: layouts
+
+# Permalink
+permalinks:
+  taxonomy: 
+    jobs_expertises: /jobs/expertises/
+  term:
+    jobs_expertises: /jobs/expertises/:slug/
+  
+# Set taxonomy
+taxonomies:
+  jobs_expertise: jobs_expertises
