@@ -1,4 +1,5 @@
-<article class="place jobs_expertise" itemscope itemtype="http://schema.org/Organization"{{ partial "func/SetAnim" (dict "element" "item") }}>
+{{- $item := partial "func/GetRealExpertise" . -}}
+<article class="expertise jobs_expertise" itemscope itemtype="http://schema.org/Speciality" {{- partial "func/SetAnim" (dict "element" "item") }}>
   {{ partial "jobs_expertises/item/content" . }}
-  {{ partial "jobs_expertises/item/media" . }}
+  {{ partial "jobs_expertises/item/media" $item }}
 </article>
