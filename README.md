@@ -1,4 +1,4 @@
-# hugolify-themes-jobs-expertises
+# hugolify-theme-jobs-expertises
 
 ## Install
 
