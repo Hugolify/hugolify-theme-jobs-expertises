@@ -1,5 +1,5 @@
 {{- $item := partial "func/GetRealExpertise" . -}}
-<article class="expertise jobs_expertise" itemscope itemtype="http://schema.org/Speciality" {{- partial "func/SetAnim" (dict "element" "item") }}>
+<article class="expertise jobs_expertise" itemscope itemtype="http://schema.org/Speciality" {{- partial "func/SetAnim.html" (dict "element" "item") }}>
   {{ partial "jobs_expertises/item/content" . }}
   {{ partial "jobs_expertises/item/media" $item }}
 </article>

@@ -3,8 +3,8 @@
   {{- range . }}
     {{- $expertise := partial "func/GetRealExpertise" . -}}
     {{- with $expertise }}
-      <aside class="expertise" itemscope itemtype="http://schema.org/Specialty" {{- partial "func/SetAnim" (dict "element" "item") }}>
-        {{ partial "expertises/item/content-large" . }}
+      <aside class="expertise" itemscope itemtype="http://schema.org/Specialty" {{- partial "func/SetAnim.html" (dict "element" "item") }}>
+        {{ partial "expertises/item/content" . }}
       </aside>
     {{ end -}}
   {{ end -}}
