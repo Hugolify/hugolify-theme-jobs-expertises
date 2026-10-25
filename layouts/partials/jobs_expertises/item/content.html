@@ -1,5 +1,4 @@
-{{- $expertise := partial "func/GetRealExpertise" . -}}
 <a href="{{ .Permalink }}" itemprop="url" class="content">
-  {{ partial "commons/item/title" $expertise }}
-  {{ partialCached "commons/item/more" . }}
+  {{ partial "commons/item/title.html" . }}
+  {{ partialCached "commons/item/more.html" . }}
 </a>
