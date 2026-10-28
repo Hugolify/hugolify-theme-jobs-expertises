@@ -1,10 +1,9 @@
 {{- with .GetTerms "jobs_expertises" }}
-  {{- $expertises := slice -}}
   {{- range . }}
-    {{- $expertise := partial "func/GetRealExpertise" . -}}
+    {{- $expertise := partial "func/GetRealExpertise.html" . -}}
     {{- with $expertise }}
-      <aside class="expertise" itemscope itemtype="http://schema.org/Specialty" {{- partial "func/SetAnim.html" (dict "element" "item") }}>
-        {{ partial "expertises/item/content" . }}
+      <aside class="item expertise" {{- partial "func/SetAnim.html" (dict "element" "item") }}>
+        {{ partial "expertises/item/content.html" . }}
       </aside>
     {{ end -}}
   {{ end -}}

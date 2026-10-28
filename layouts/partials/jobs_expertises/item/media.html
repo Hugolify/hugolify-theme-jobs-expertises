@@ -1,2 +1,2 @@
-{{ $place := partial "func/GetRealPlace" . }}
-{{ partial "places/item/media" $place }}
+{{- $expertise := partial "func/GetRealExpertise.html" . }}
+{{ partial "expertises/item/media.html" $expertise }}

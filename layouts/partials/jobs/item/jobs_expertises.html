@@ -1,13 +1,12 @@
 {{- with .GetTerms "jobs_expertises" }}
-  {{- $places := slice -}}
+  {{- $expertises := slice -}}
   {{- range . }}
-    {{- $place := partial "func/GetRealPlace" . -}}
-    {{- with $place }}
-      {{- $name := cond (isset .Params.address "city") .Params.address.city .Title -}}
-      {{- $places = $places | append (partial "func/PrepareHTML.html" $name) -}}
+    {{- $expertise := partial "func/GetRealExpertise.html" . -}}
+    {{- with $expertise }}
+      {{- $expertises = $expertises | append (partial "func/PrepareHTML.html" .Title) -}}
     {{ end -}}
   {{ end -}}
-  {{- with $places }}
-    <p class="job-places">{{ delimit . ", "}}</p>
+  {{- with $expertises }}
+    <p class="job-expertises">{{ delimit . ", "}}</p>
   {{ end -}}
 {{ end -}}
